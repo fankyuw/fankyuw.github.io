@@ -1,16 +1,16 @@
 body{
     background-image:url('baaaaka.png');
     image-rendering: pixelated;
-    background-size: 64px;
-    animation: scroll 2s linear infinite;
-
+    background-size: 100px;
+    animation: scroll 3s linear infinite;
+    font-size: x-large;
 }
 @keyframes scroll{
     0%{
         background-position: 0 0;
     }
     100%{
-        background-position: -64px -64px;
+        background-position: -100px -200px;
     }
 }
 .box{
@@ -35,12 +35,18 @@ h2{
     display: flex;
     flex-wrap: wrap;
 }
+.left{
+    width: fit-content;
+}
 .right {
     margin-left: auto;
     margin-right: 0;
+    max-width: 700px;
   }
 .grid{
     display: grid;
     grid-auto-flow: column;
+    font-size: 150%;
+    font-family: 'Comic Sans MS';
 
 }
