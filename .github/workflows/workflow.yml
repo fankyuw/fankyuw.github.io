@@ -5,11 +5,12 @@ jobs:
   pages-directory-listing:
     runs-on: ubuntu-latest
     name: Directory Listings Index
+    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          ref: dummy-data    #checkout different branch
+          ref: main #checkout different branch
 
       - name: Generate Directory Listings
         uses: jayanta525/github-pages-directory-listing@v4.0.0
@@ -38,3 +39,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4.0.0
+        
