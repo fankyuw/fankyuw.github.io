@@ -34,7 +34,7 @@ musicFolders.forEach(folder =>{
             });
             musicPaths.forEach(element => { 
                 const currentDiv = document.getElementById(folder).appendChild(divNode.cloneNode())
-                var newText = element.replace("%"," ")
+                var newText = element.replaceAll("%"," ")
                 currentDiv.innerHTML = newText
                 currentDiv.appendChild(document.createElement("br"))
                 const currentAudioNode = currentDiv.appendChild(audioNode.cloneNode())
