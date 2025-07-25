@@ -24,7 +24,7 @@ divNode.setAttribute("class","audiotrack")
 console.log(musicFolders)
 musicFolders.forEach(folder =>{
     $.ajax({
-        url:`/random-music/${folder}`,
+        url:`https://fankyu.blog/random-music/${folder}`,
         success:function(data){
             musicPaths = []
             musicExt.forEach(element => {
