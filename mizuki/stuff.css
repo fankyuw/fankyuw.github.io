@@ -1,0 +1,49 @@
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card{
+    width: 300px;
+}
+.container{
+    flex-wrap: wrap;
+    display: flex;
+}
+#popupImage {
+    opacity: 100%;
+}
+#popupImage:hover {
+    opacity: 70%;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 12%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.caption-text{
+    margin: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
