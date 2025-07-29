@@ -34,12 +34,13 @@ musicFolders.forEach(folder =>{
             });
             musicPaths.forEach(element => { 
                 const currentDiv = document.getElementById(folder).appendChild(divNode.cloneNode())
-                var newText = element.replaceAll("%20"," ")
+                var newPath = element.replaceAll(`\\random-music\\${folder}\\`,"")
+                var newText = newPath.replaceAll("%20"," ")
                 currentDiv.innerHTML = newText
                 currentDiv.appendChild(document.createElement("br"))
                 const currentAudioNode = currentDiv.appendChild(audioNode.cloneNode())
                 const currentAudioSource = currentAudioNode.appendChild(audioSource.cloneNode())
-                currentAudioSource.setAttribute("src",`/random-music/${folder}/${element}`)
+                currentAudioSource.setAttribute("src",`/random-music/${folder}/${newPath}/`)
             }); 
             console.log('done')
         }
