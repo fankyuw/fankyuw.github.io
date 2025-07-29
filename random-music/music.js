@@ -40,7 +40,7 @@ musicFolders.forEach(folder =>{
                 currentDiv.appendChild(document.createElement("br"))
                 const currentAudioNode = currentDiv.appendChild(audioNode.cloneNode())
                 const currentAudioSource = currentAudioNode.appendChild(audioSource.cloneNode())
-                currentAudioSource.setAttribute("src",`/random-music/${folder}/${newPath}/`)
+                currentAudioSource.setAttribute("src",`/random-music/${folder}/${newPath}`)
             }); 
             console.log('done')
         }
