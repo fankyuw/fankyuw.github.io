@@ -48,6 +48,7 @@ function getImages(classname) {
     }
 }
 
+
 $.ajax({
     url:"/mizuki/cards/",
     success:function(data){
