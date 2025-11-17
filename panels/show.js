@@ -22,8 +22,8 @@ $.ajax({
             var newPath = element.replaceAll("\\panels\\panels\\","")
             var newText = newPath.replaceAll("%5C","/")
             console.log(newText)
-            // currentPanel.setAttribute("src",`/panels/panels/${newPath}`)
-            currentPanel.setAttribute("src",newText)
+            currentPanel.setAttribute("src",`/panels/panels/${newPath}`)
+            // currentPanel.setAttribute("src",newText)
         })
     }
 })
