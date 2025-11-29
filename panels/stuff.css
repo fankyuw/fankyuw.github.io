@@ -4,6 +4,8 @@ body{
     background-size: 100px;
     animation: scroll 3s linear infinite;
     font-size: x-large;
+    height: 100%;
+    width: 100%;
 }
 .gradient{
     background-image: linear-gradient(to right,rgba(0, 0, 0, 0.937),rgba(0, 118, 228, 0.463));
@@ -78,7 +80,10 @@ h3{
 }
 .panel{
     padding: 10px;
-    width: 600px;
+    width: 40%;
+    max-width: 600px;
+    min-width: 300px;
+    aspect-ratio: 100 / 131;
 }
 
 .center{
@@ -113,8 +118,23 @@ h3{
   position: relative;
   display:block;
   height: 90%;
-  top: 5%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+    aspect-ratio: 100 / 131;
 }
 .modal-content:hover {
     cursor: zoom-in;
+}
+
+.close {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    margin: none;
+    outline-color: black;
+    color: white;
+    position: fixed; top: 5px; left: 5px; right: 0px;
+    z-index: 2;
+}
+.close:hover{
+    cursor: pointer;
 }

@@ -10,7 +10,34 @@ function popPanel(classname) {
     const images = document.getElementsByClassName(classname)
     const modal = document.getElementById("modalContainer")
     const modalImg = document.getElementById("modalImage")
+    const cross = document.getElementById("closeButton")
     var on = true
+    function close() {
+        on = true
+        modalImg.style.height = "90%"
+        modal.style.display = "none";
+    }
+    modal.onclick = function(){
+        close()
+    }
+    cross.onclick = function(){
+        close()
+    }
+    modalImg.onclick = function(){
+        if (on) {
+            on = false
+            modalImg.style.height = "200%"
+            modalImg.style.cursor = "zoom-out"
+        }
+        else {
+            on = true
+            modalImg.style.height = "90%"
+            modalImg.style.cursor = "zoom-in"
+        }
+    }
+    modalImg.addEventListener('click', (event) => {
+        event.stopPropagation()
+    })
     for (var i = 0; i < images.length; i++) {
         panel = images.item(i)
         console.log(panel)
@@ -19,26 +46,6 @@ function popPanel(classname) {
             modal.style.display = "block"
             modalImg.src = this.src
         }
-        modal.onclick = function(){
-            on = true
-            modalImg.style.height = "90%"
-            modal.style.display = "none";
-        }
-        modalImg.onclick = function(){
-            if (on) {
-                on = false
-                modalImg.style.height = "200%"
-                modalImg.style.cursor = "zoom-out"
-            }
-            else {
-                on = true
-                modalImg.style.height = "90%"
-                modalImg.style.cursor = "zoom-in"
-            }
-        }
-        modalImg.addEventListener('click', (event) => {
-            event.stopPropagation()
-        })
     }
 
 }
@@ -59,8 +66,8 @@ $.ajax({
             var newPath = element.replaceAll("\\panels\\panels\\","")
             var newText = newPath.replaceAll("%5C","/")
             console.log(newText)
-            currentPanel.setAttribute("src",`/panels/panels/${newPath}`)
-            // 
+            currentPanel.setAttribute("src",`/panels/panels/${newText}`)
+            // /panels/panels/
             // currentPanel.setAttribute("src",newText)
             popPanel("panel")
         })
