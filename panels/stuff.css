@@ -87,3 +87,34 @@ h3{
     align-items: center;
     justify-content: center;
 }
+#popupImage {
+  opacity: 100%;
+}
+#popupImage:hover {
+    cursor: pointer;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  /* padding-top: 12%; */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  position: relative;
+  display:block;
+  height: 90%;
+  top: 5%;
+}
+.modal-content:hover {
+    cursor: zoom-in;
+}

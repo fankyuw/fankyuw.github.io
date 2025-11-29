@@ -4,7 +4,44 @@ const panelExt = ["png","jpeg"]
 
 const panelNode = document.createElement("img")
 panelNode.setAttribute("class","panel")
+panelNode.setAttribute("id","popupImage")
 
+function popPanel(classname) {
+    const images = document.getElementsByClassName(classname)
+    const modal = document.getElementById("modalContainer")
+    const modalImg = document.getElementById("modalImage")
+    var on = true
+    for (var i = 0; i < images.length; i++) {
+        panel = images.item(i)
+        console.log(panel)
+        panel.onclick = function(){
+            console.log(panel)
+            modal.style.display = "block"
+            modalImg.src = this.src
+        }
+        modal.onclick = function(){
+            on = true
+            modalImg.style.height = "90%"
+            modal.style.display = "none";
+        }
+        modalImg.onclick = function(){
+            if (on) {
+                on = false
+                modalImg.style.height = "200%"
+                modalImg.style.cursor = "zoom-out"
+            }
+            else {
+                on = true
+                modalImg.style.height = "90%"
+                modalImg.style.cursor = "zoom-in"
+            }
+        }
+        modalImg.addEventListener('click', (event) => {
+            event.stopPropagation()
+        })
+    }
+
+}
 
 $.ajax({
     url:"/panels/panels/",
@@ -23,7 +60,9 @@ $.ajax({
             var newText = newPath.replaceAll("%5C","/")
             console.log(newText)
             currentPanel.setAttribute("src",`/panels/panels/${newPath}`)
+            // 
             // currentPanel.setAttribute("src",newText)
+            popPanel("panel")
         })
     }
 })
