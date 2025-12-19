@@ -117,6 +117,7 @@ h3{
   margin: auto;
   position: relative;
   display:block;
+  justify-content: center;
   height: 90%;
   padding-top: 2.5%;
   padding-bottom: 2.5%;

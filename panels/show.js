@@ -66,7 +66,7 @@ $.ajax({
             var newPath = element.replaceAll("\\panels\\panels\\","")
             var newText = newPath.replaceAll("%5C","/")
             console.log(newText)
-            currentPanel.setAttribute("src",`/panels/panels/${newText}`)
+            currentPanel.setAttribute("src",`${newText}`)
             // /panels/panels/
             // currentPanel.setAttribute("src",newText)
             popPanel("panel")
