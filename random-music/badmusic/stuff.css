@@ -7,7 +7,7 @@ body{
     background-attachment: fixed;
 }
 .gradient{
-    background-image: linear-gradient(to right,rgba(0, 34, 255, 0.241),rgba(212, 0, 255, 0.108));
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.937),rgba(8, 228, 0, 0.463));
     position:fixed;
     top: 0%;
     right: 0%;
@@ -16,6 +16,7 @@ body{
     margin: 0;
     padding: 10px;
     z-index: -10;
+    
 }
 @keyframes scroll{
     0%{
@@ -64,54 +65,14 @@ h3{
     display: flex;
     flex-wrap: wrap;
 }
-.left{
-    width: fit-content;
-
-}
-.right {
-    margin-left: auto;
-    margin-right: 0;
-    max-width: 700px;
-  }
-.grid{
-    display: grid;
-    grid-auto-flow: column;
-    font-size: 100%;
-    font-family: 'Comic Sans MS';
-
-}
-.tab{
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-.tab button{
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-.audio{
-    float: inline-end;
-    margin: 10px;
-    padding: 10px;
-    font-weight: bold;
-    background-color: white;
-    width: fit-content;
-    height: fit-content;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border-radius: 4px;
-    border: 2px solid #000000;
-    paint-order: stroke fill;
+.audiotrack {
     -webkit-text-stroke: 3px white;
+    paint-order: stroke fill;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.stroke{
+    -webkit-text-stroke: 3px white;
+    paint-order: stroke fill;
 }

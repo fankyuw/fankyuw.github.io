@@ -1,7 +1,9 @@
+
 body{
     background-image:url('baaaaka.png');
     image-rendering: pixelated;
     background-size: 100px;
+    background-attachment: fixed;
     animation: scroll 3s linear infinite;
     font-size: x-large;
 }
